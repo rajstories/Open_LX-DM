@@ -207,7 +207,7 @@ export default function App() {
             transition={{ duration: 1, ease: 'easeOut' }}
             className="text-6xl md:text-8xl lg:text-9xl text-white tracking-tight whitespace-nowrap font-instrument font-light select-text leading-none"
           >
-            Monetize then <em className="italic font-instrument not-italic font-light">all</em>.
+            Monetize Your <em className="italic font-instrument not-italic font-light">Audience</em>
           </motion.h1>
 
           {/* Subtitle */}
@@ -217,7 +217,7 @@ export default function App() {
             transition={{ duration: 1, delay: 0.2 }}
             className="text-white/85 text-sm md:text-base leading-relaxed px-4 max-w-xl mt-8 font-light"
           >
-            The ultimate link-in-bio and monetization hub for creators. Sell digital products, host bookings, and scale your revenue from a premium glassmorphic page.
+            Build your storefront, automate engagement, sell products and services, and grow your creator business from one platform.
           </motion.p>
 
           {/* Manifesto button */}
