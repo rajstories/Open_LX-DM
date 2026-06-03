@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
-  Home,
-  ShoppingBag,
-  Zap,
-  BarChart3,
-  Settings,
-  ShieldCheck,
   Menu,
   X,
   ChevronLeft,
@@ -14,9 +8,7 @@ import {
   LogOut,
   Bell,
   Sparkles,
-  User,
-  BookOpen,
-  Compass
+  User
 } from 'lucide-react';
 import Logo from '../Logo';
 
@@ -85,14 +77,98 @@ export default function DashboardShell({
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const menuItems = [
-    { id: 'home', label: 'Home Dashboard', icon: <Home className="w-4.5 h-4.5" /> },
-    { id: 'storefront', label: 'Storefront Products', icon: <ShoppingBag className="w-4.5 h-4.5" /> },
-    { id: 'autodm', label: 'Auto DM Automations', icon: <Zap className="w-4.5 h-4.5" />, badge: 'New' },
-    { id: 'analytics', label: 'Audience & Sales', icon: <BarChart3 className="w-4.5 h-4.5" /> },
-    { id: 'kyc', label: 'KYC & Payments', icon: <ShieldCheck className="w-4.5 h-4.5" /> },
-    { id: 'academy', label: 'Creator Academy', icon: <BookOpen className="w-4.5 h-4.5" /> },
-    { id: 'explore_apps', label: 'Explore Apps', icon: <Compass className="w-4.5 h-4.5" /> },
-    { id: 'settings', label: 'Platform Settings', icon: <Settings className="w-4.5 h-4.5" /> },
+    {
+      id: 'home',
+      label: 'Home Dashboard',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9.5z" />
+          <path d="M9 21V12h6v9" fill="currentColor" opacity="0.15" stroke="none" />
+        </svg>
+      )
+    },
+    {
+      id: 'storefront',
+      label: 'Storefront Products',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4H6z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+          <path d="M3 6l3-4h12l3 4" fill="currentColor" opacity="0.15" stroke="none" />
+        </svg>
+      )
+    },
+    {
+      id: 'autodm',
+      label: 'Auto DM Automations',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-7.6-4.7 8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          <polygon points="13 8 9 13 12 13 11 16 15 11 12 11 13 8" fill="currentColor" opacity="0.2" stroke="none" />
+          <polygon points="13 8 9 13 12 13 11 16 15 11 12 11 13 8" />
+        </svg>
+      ),
+      badge: 'New'
+    },
+    {
+      id: 'analytics',
+      label: 'Audience & Sales',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M3 3v18h18" />
+          <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" />
+          <circle cx="18.7" cy="8" r="2.5" fill="currentColor" opacity="0.25" stroke="none" />
+          <circle cx="10.8" cy="10.5" r="2.5" fill="currentColor" opacity="0.25" stroke="none" />
+        </svg>
+      )
+    },
+    {
+      id: 'kyc',
+      label: 'KYC & Payments',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" fill="currentColor" opacity="0.15" stroke="none" />
+          <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+          <path d="M9 11l2 2 4-4" />
+        </svg>
+      )
+    },
+    {
+      id: 'academy',
+      label: 'Creator Academy',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" fill="currentColor" opacity="0.1" stroke="none" />
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" fill="currentColor" opacity="0.1" stroke="none" />
+          <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+          <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          <path d="M12 7V21" />
+        </svg>
+      )
+    },
+    {
+      id: 'explore_apps',
+      label: 'Explore Apps',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="10" />
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" fill="currentColor" opacity="0.25" stroke="none" />
+          <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76" />
+        </svg>
+      )
+    },
+    {
+      id: 'settings',
+      label: 'Platform Settings',
+      icon: (
+        <svg viewBox="0 0 24 24" className="w-4.5 h-4.5" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="12" cy="12" r="3" fill="currentColor" opacity="0.2" stroke="none" />
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1-1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+        </svg>
+      )
+    }
   ];
 
   const handleTabClick = (tabId: string) => {
@@ -101,11 +177,11 @@ export default function DashboardShell({
   };
 
   return (
-    <div className="h-screen w-full bg-dash-bg text-dash-text font-sans flex select-none overflow-hidden">
+    <div className="h-[100dvh] w-full bg-dash-bg text-dash-text font-sans flex select-none overflow-hidden">
       
       {/* 1. DESKTOP SIDEBAR (collapsible) */}
       <aside
-        className={`hidden md:flex flex-col justify-between bg-dash-sidebar text-white transition-all duration-300 border-r border-[#252724] shrink-0 h-screen sticky top-0 z-30 ${
+        className={`hidden md:flex flex-col justify-between bg-dash-sidebar text-white transition-all duration-300 ease-in-out border-r border-[#252724] shrink-0 h-[100dvh] sticky top-0 z-30 ${
           collapsed ? 'w-20 p-3' : 'w-[240px] p-5'
         }`}
       >
@@ -252,7 +328,7 @@ export default function DashboardShell({
       </AnimatePresence>
 
       {/* 3. CORE CONTENT AREA */}
-      <div className="flex-1 flex flex-col h-screen overflow-y-auto relative">
+      <div className="flex-1 flex flex-col h-[100dvh] overflow-y-auto relative">
         
         {/* Sticky Topbar */}
         <header className="sticky top-0 z-20 w-full bg-dash-bg/85 backdrop-blur-md border-b border-[#E8E5DF] px-6 py-4 flex justify-between items-center">
@@ -277,8 +353,10 @@ export default function DashboardShell({
 
           {/* Quick Actions (Upgrade to Pro, Notifications, Profile) */}
           <div className="flex items-center gap-4">
-            <button className="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#FF6846]/10 to-[#e6005c]/10 text-[#FF6846] text-xs font-bold hover:from-[#FF6846]/15 hover:to-[#e6005c]/15 transition-all border border-[#FF6846]/20 cursor-pointer shadow-sm">
-              <Sparkles className="w-3.5 h-3.5 text-[#FF6846]" />
+            <button className="hidden sm:flex items-center gap-2 px-4.5 py-1.5 rounded-full bg-[#171817] text-white text-xs font-bold hover:bg-[#252724] active:scale-[0.97] transition-all border border-neutral-800/80 cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.1)] hover:shadow-[0_4px_12px_rgba(255,104,70,0.2)] group relative overflow-hidden">
+              {/* Shimmer shine effect */}
+              <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/10 to-transparent group-hover:translate-x-full transition-transform duration-1000 ease-out pointer-events-none" />
+              <Sparkles className="w-3.5 h-3.5 text-[#FF6846] fill-[#FF6846]/30 group-hover:rotate-12 transition-transform duration-300" />
               <span>Upgrade to Pro</span>
             </button>
 
